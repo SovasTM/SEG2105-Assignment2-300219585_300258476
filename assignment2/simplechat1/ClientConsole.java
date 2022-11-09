@@ -176,11 +176,11 @@ public class ClientConsole implements ChatIF
     		port = Integer.parseInt(args[1]);
     	}
 	} catch (IOException e) {
-		port = 1;
+		port = DEFAULT_PORT;
 		System.out.println("Port set to default port 1");
 	}
     //*** end of E49 b mod
-    ClientConsole chat= new ClientConsole(host, DEFAULT_PORT);
+    ClientConsole chat= new ClientConsole(host, port);
     chat.accept();  //Wait for console data
   }
 }
